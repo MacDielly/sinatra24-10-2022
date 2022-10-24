@@ -6,11 +6,12 @@
     <h1>THP gossips!</h1>
     <p>Cliques ici pour créer un nouveau gossip:</p>
     <a href="/gossips/new/">LÀ!!!</a>
-    <% gossips.each do |gossip| %>
+    <% gossips.each_with_index do |gossip, id| %>
         <p>
           <%= gossip.author %><br/>
           <%= gossip.content %>
         </p>
+        <a href="/gossips/<%=id%>/">Links</a>
       <% end %>
   </body>
 </html>

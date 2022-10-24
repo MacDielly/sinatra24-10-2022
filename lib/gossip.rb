@@ -27,8 +27,16 @@ class Gossip
   end
 
 #Cherche un gossip specifique.
-  def find()
-
+  def self.find(id)
+    select = []
+    Gossip.all.each do |i|
+      select << i
+    end
+    select[id]
   end
+
+  # def update
+
+  # end
 
 end
