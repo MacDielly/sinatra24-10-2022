@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+ruby '3.0.0'
+gem 'pry'
+gem 'colorize'
+gem 'rubocop'
+gem 'sinatra'
+gem 'puma'
+gem "rack"
+gem 'shotgun', git: 'https://github.com/delonnewman/shotgun.git'
+gem 'csv'
