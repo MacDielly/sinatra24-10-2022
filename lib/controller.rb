@@ -11,7 +11,7 @@ class ApplicationController < Sinatra::Base
     erb :new_gossip
   end
   
-#Récupère les données du formulaire de la page html '/gossips/new/'.
+#Récupère les données du formulaire de la page et les renvoie à la database (db) html '/gossips/new/'.
   post '/gossips/new/' do
     Gossip.new("#{params["gossip_author"]}", "#{params["gossip_content"]}").save
     redirect '/'
@@ -24,5 +24,10 @@ class ApplicationController < Sinatra::Base
   #   puts "De la bombe, et du coup ça, ça doit être ce que l'utilisateur a passé dans le champ gossip_content : #{params["gossip_content"]}"
   #   puts "Ça déchire sa mémé, bon allez je m'en vais du serveur, ciao les BGs !"
   # end
+
+  get '/gossips/:id/' do
+    hello_name = params[:id]
+    "Voici le numéro du potin que tu veux: #{hello_name}"
+  end
 
 end
