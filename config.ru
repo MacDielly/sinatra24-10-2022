@@ -1,3 +1,4 @@
+#Equivalent du app.rb, il initialise le lancement de l'application
 require 'bundler'
 Bundler.require
 
